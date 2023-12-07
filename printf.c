@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 
 		while (j < (sizeof(prints) / sizeof(print_t)))
 		{
-			if (prints[j].specifier[0] == format[i]
+			if (prints[j].specifier[0] == format[i] &&
 					prints[j].specifier[1] == format[i + 1])
 			{
 				printedlength += prints[j].print_function(arguments);
