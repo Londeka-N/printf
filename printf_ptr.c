@@ -7,6 +7,7 @@
  */
 void printHex(unsigned long int num, int isUppercase)
 {
+	char *hexDigits = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
 	if (num >= 16)
 	printHex(num / 16, isUppercase);
 
@@ -43,6 +44,6 @@ int printPointer(va_list args)
 		printHex((pointerAddress >> (digitCount * 4)) & 0xF, 0);
 	}
 
-	return totalCharacters;
+	return (totalCharacters);
 }
 
