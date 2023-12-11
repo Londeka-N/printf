@@ -9,13 +9,13 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, printedlength = 0;
+	int i = 0;
 	va_list arguments;
 
 	print_t prints[] = {
-		{"%s", printf_str}, {"%%", printf_37}, {"%r", printf_revstr},
-		{"%c", printf_c}, {"%d", printf_int}, {"%i", printf_int},
-		{"%b", printf_b}, {"%R", printf_rot}, {"%p", printf_ptr}};
+		{"%s", printf_str}, {"%c", printf_c}, {"%d", printf_int}, {"%i", printf_int}
+	};
+	int printedlength = 0;
 	va_start(arguments, format);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
